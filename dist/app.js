@@ -8,7 +8,7 @@ require("reflect-metadata");
 const typeorm_1 = require("typeorm");
 const createRoute_1 = require("./routes/createRoute");
 const Client_1 = require("./entities/Client");
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use("/api", createRoute_1.ClientRouter);
