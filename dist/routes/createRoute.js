@@ -34,7 +34,8 @@ router.post("/data", (req, res) => __awaiter(void 0, void 0, void 0, function* (
 router.get("/alldata", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         // await Client.delete({ id: 1 });
-        const allrecord = yield Client_1.Client.findOneBy({ id: 1 });
+        // const allrecord = await Client.findOneBy({ id: 1 });
+        const allrecord = yield Client_1.Client.find();
         return res.json(allrecord);
     }
     catch (err) {
